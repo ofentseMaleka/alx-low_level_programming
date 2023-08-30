@@ -1,17 +1,16 @@
 #include "main.h"
 /**
- * _puts_recursion - function that fills memory with a constant byte
- *@s: first value
- *
+ * _puts_recursion - function puts();
+ *@s: firs input
+ *return: return 0 for success
  */
 void _puts_recursion(char *s)
 {
-if (*s == '\0') {
-_putchar('\n'); // Assuming _putchar is defined in main.h
-}
-else
+if (*s)
 {
 _putchar(*s);
 _puts_recursion(s + 1);
 }
+else
+_putchar('\n');
 }
